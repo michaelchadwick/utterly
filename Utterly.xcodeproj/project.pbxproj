@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		54B0F8ED1DE8A0E3000D0F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0F8EC1DE8A0E3000D0F8F /* AppDelegate.swift */; };
+		54B0F8EF1DE8A0E3000D0F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0F8EE1DE8A0E3000D0F8F /* ViewController.swift */; };
+		54B0F8F11DE8A0E3000D0F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B0F8F01DE8A0E3000D0F8F /* Assets.xcassets */; };
+		54B0F8F41DE8A0E3000D0F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B0F8F21DE8A0E3000D0F8F /* Main.storyboard */; };
+		54B0F8FF1DE8A0E4000D0F8F /* UtterlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0F8FE1DE8A0E4000D0F8F /* UtterlyTests.swift */; };
+		54B0F90A1DE8A0E4000D0F8F /* UtterlyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0F9091DE8A0E4000D0F8F /* UtterlyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54B0F8FB1DE8A0E4000D0F8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54B0F8E11DE8A0E3000D0F8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54B0F8E81DE8A0E3000D0F8F;
+			remoteInfo = Utterly;
+		};
+		54B0F9061DE8A0E4000D0F8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54B0F8E11DE8A0E3000D0F8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54B0F8E81DE8A0E3000D0F8F;
+			remoteInfo = Utterly;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		54B0F8E91DE8A0E3000D0F8F /* Utterly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utterly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B0F8EC1DE8A0E3000D0F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54B0F8EE1DE8A0E3000D0F8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54B0F8F01DE8A0E3000D0F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		54B0F8F31DE8A0E3000D0F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		54B0F8F51DE8A0E3000D0F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54B0F8FA1DE8A0E4000D0F8F /* UtterlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UtterlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B0F8FE1DE8A0E4000D0F8F /* UtterlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtterlyTests.swift; sourceTree = "<group>"; };
+		54B0F9001DE8A0E4000D0F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54B0F9051DE8A0E4000D0F8F /* UtterlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UtterlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54B0F9091DE8A0E4000D0F8F /* UtterlyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtterlyUITests.swift; sourceTree = "<group>"; };
+		54B0F90B1DE8A0E4000D0F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		54B0F8E61DE8A0E3000D0F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B0F8F71DE8A0E4000D0F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B0F9021DE8A0E4000D0F8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		54B0F8E01DE8A0E3000D0F8F = {
+			isa = PBXGroup;
+			children = (
+				54B0F8EB1DE8A0E3000D0F8F /* Utterly */,
+				54B0F8FD1DE8A0E4000D0F8F /* UtterlyTests */,
+				54B0F9081DE8A0E4000D0F8F /* UtterlyUITests */,
+				54B0F8EA1DE8A0E3000D0F8F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		54B0F8EA1DE8A0E3000D0F8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54B0F8E91DE8A0E3000D0F8F /* Utterly.app */,
+				54B0F8FA1DE8A0E4000D0F8F /* UtterlyTests.xctest */,
+				54B0F9051DE8A0E4000D0F8F /* UtterlyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54B0F8EB1DE8A0E3000D0F8F /* Utterly */ = {
+			isa = PBXGroup;
+			children = (
+				54B0F8EC1DE8A0E3000D0F8F /* AppDelegate.swift */,
+				54B0F8EE1DE8A0E3000D0F8F /* ViewController.swift */,
+				54B0F8F01DE8A0E3000D0F8F /* Assets.xcassets */,
+				54B0F8F21DE8A0E3000D0F8F /* Main.storyboard */,
+				54B0F8F51DE8A0E3000D0F8F /* Info.plist */,
+			);
+			path = Utterly;
+			sourceTree = "<group>";
+		};
+		54B0F8FD1DE8A0E4000D0F8F /* UtterlyTests */ = {
+			isa = PBXGroup;
+			children = (
+				54B0F8FE1DE8A0E4000D0F8F /* UtterlyTests.swift */,
+				54B0F9001DE8A0E4000D0F8F /* Info.plist */,
+			);
+			path = UtterlyTests;
+			sourceTree = "<group>";
+		};
+		54B0F9081DE8A0E4000D0F8F /* UtterlyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				54B0F9091DE8A0E4000D0F8F /* UtterlyUITests.swift */,
+				54B0F90B1DE8A0E4000D0F8F /* Info.plist */,
+			);
+			path = UtterlyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54B0F8E81DE8A0E3000D0F8F /* Utterly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54B0F90E1DE8A0E4000D0F8F /* Build configuration list for PBXNativeTarget "Utterly" */;
+			buildPhases = (
+				54B0F8E51DE8A0E3000D0F8F /* Sources */,
+				54B0F8E61DE8A0E3000D0F8F /* Frameworks */,
+				54B0F8E71DE8A0E3000D0F8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Utterly;
+			productName = Utterly;
+			productReference = 54B0F8E91DE8A0E3000D0F8F /* Utterly.app */;
+			productType = "com.apple.product-type.application";
+		};
+		54B0F8F91DE8A0E4000D0F8F /* UtterlyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54B0F9111DE8A0E4000D0F8F /* Build configuration list for PBXNativeTarget "UtterlyTests" */;
+			buildPhases = (
+				54B0F8F61DE8A0E4000D0F8F /* Sources */,
+				54B0F8F71DE8A0E4000D0F8F /* Frameworks */,
+				54B0F8F81DE8A0E4000D0F8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54B0F8FC1DE8A0E4000D0F8F /* PBXTargetDependency */,
+			);
+			name = UtterlyTests;
+			productName = UtterlyTests;
+			productReference = 54B0F8FA1DE8A0E4000D0F8F /* UtterlyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		54B0F9041DE8A0E4000D0F8F /* UtterlyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54B0F9141DE8A0E4000D0F8F /* Build configuration list for PBXNativeTarget "UtterlyUITests" */;
+			buildPhases = (
+				54B0F9011DE8A0E4000D0F8F /* Sources */,
+				54B0F9021DE8A0E4000D0F8F /* Frameworks */,
+				54B0F9031DE8A0E4000D0F8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54B0F9071DE8A0E4000D0F8F /* PBXTargetDependency */,
+			);
+			name = UtterlyUITests;
+			productName = UtterlyUITests;
+			productReference = 54B0F9051DE8A0E4000D0F8F /* UtterlyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54B0F8E11DE8A0E3000D0F8F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Michael Chadwick";
+				TargetAttributes = {
+					54B0F8E81DE8A0E3000D0F8F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 9YM4Z8E88H;
+						ProvisioningStyle = Automatic;
+					};
+					54B0F8F91DE8A0E4000D0F8F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 9YM4Z8E88H;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 54B0F8E81DE8A0E3000D0F8F;
+					};
+					54B0F9041DE8A0E4000D0F8F = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 9YM4Z8E88H;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 54B0F8E81DE8A0E3000D0F8F;
+					};
+				};
+			};
+			buildConfigurationList = 54B0F8E41DE8A0E3000D0F8F /* Build configuration list for PBXProject "Utterly" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 54B0F8E01DE8A0E3000D0F8F;
+			productRefGroup = 54B0F8EA1DE8A0E3000D0F8F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				54B0F8E81DE8A0E3000D0F8F /* Utterly */,
+				54B0F8F91DE8A0E4000D0F8F /* UtterlyTests */,
+				54B0F9041DE8A0E4000D0F8F /* UtterlyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		54B0F8E71DE8A0E3000D0F8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B0F8F11DE8A0E3000D0F8F /* Assets.xcassets in Resources */,
+				54B0F8F41DE8A0E3000D0F8F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B0F8F81DE8A0E4000D0F8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B0F9031DE8A0E4000D0F8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		54B0F8E51DE8A0E3000D0F8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B0F8EF1DE8A0E3000D0F8F /* ViewController.swift in Sources */,
+				54B0F8ED1DE8A0E3000D0F8F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B0F8F61DE8A0E4000D0F8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B0F8FF1DE8A0E4000D0F8F /* UtterlyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B0F9011DE8A0E4000D0F8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B0F90A1DE8A0E4000D0F8F /* UtterlyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54B0F8FC1DE8A0E4000D0F8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54B0F8E81DE8A0E3000D0F8F /* Utterly */;
+			targetProxy = 54B0F8FB1DE8A0E4000D0F8F /* PBXContainerItemProxy */;
+		};
+		54B0F9071DE8A0E4000D0F8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 54B0F8E81DE8A0E3000D0F8F /* Utterly */;
+			targetProxy = 54B0F9061DE8A0E4000D0F8F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		54B0F8F21DE8A0E3000D0F8F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				54B0F8F31DE8A0E3000D0F8F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		54B0F90C1DE8A0E4000D0F8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		54B0F90D1DE8A0E4000D0F8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		54B0F90F1DE8A0E4000D0F8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9YM4Z8E88H;
+				INFOPLIST_FILE = Utterly/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Codana.me.Utterly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		54B0F9101DE8A0E4000D0F8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9YM4Z8E88H;
+				INFOPLIST_FILE = Utterly/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Codana.me.Utterly;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		54B0F9121DE8A0E4000D0F8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9YM4Z8E88H;
+				INFOPLIST_FILE = UtterlyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Codana.me.UtterlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Utterly.app/Contents/MacOS/Utterly";
+			};
+			name = Debug;
+		};
+		54B0F9131DE8A0E4000D0F8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9YM4Z8E88H;
+				INFOPLIST_FILE = UtterlyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Codana.me.UtterlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Utterly.app/Contents/MacOS/Utterly";
+			};
+			name = Release;
+		};
+		54B0F9151DE8A0E4000D0F8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9YM4Z8E88H;
+				INFOPLIST_FILE = UtterlyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Codana.me.UtterlyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Utterly;
+			};
+			name = Debug;
+		};
+		54B0F9161DE8A0E4000D0F8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9YM4Z8E88H;
+				INFOPLIST_FILE = UtterlyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Codana.me.UtterlyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Utterly;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		54B0F8E41DE8A0E3000D0F8F /* Build configuration list for PBXProject "Utterly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B0F90C1DE8A0E4000D0F8F /* Debug */,
+				54B0F90D1DE8A0E4000D0F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54B0F90E1DE8A0E4000D0F8F /* Build configuration list for PBXNativeTarget "Utterly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B0F90F1DE8A0E4000D0F8F /* Debug */,
+				54B0F9101DE8A0E4000D0F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		54B0F9111DE8A0E4000D0F8F /* Build configuration list for PBXNativeTarget "UtterlyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B0F9121DE8A0E4000D0F8F /* Debug */,
+				54B0F9131DE8A0E4000D0F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		54B0F9141DE8A0E4000D0F8F /* Build configuration list for PBXNativeTarget "UtterlyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54B0F9151DE8A0E4000D0F8F /* Debug */,
+				54B0F9161DE8A0E4000D0F8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54B0F8E11DE8A0E3000D0F8F /* Project object */;
+}
