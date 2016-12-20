@@ -26,20 +26,20 @@ class UtterlyTextView: NSTextView {
     super.keyDown(with: theEvent) // do normal event (e.g. insert character)
     if theEvent.modifierFlags.contains(.command) {
       if theEvent.keyCode == 36 { // Cmd-Enter combo
-        NSLog("Cmd-Enter combo hit")
-        vc.startStopUtterance()
+        vc.debugLog(msg: "Cmd-Enter combo hit")
+        vc.startUtterance()
       }
     }
     if theEvent.modifierFlags.contains(.shift) {
-      NSLog("Shift key held down")
+      vc.debugLog(msg: "Shift key held down")
     }
     if theEvent.modifierFlags.contains(.control) {
-      NSLog("Control key held down")
+      vc.debugLog(msg: "Control key held down")
     }
     if theEvent.modifierFlags.contains(.option) {
-      NSLog("Option key held down")
+      vc.debugLog(msg: "Option key held down")
     }
-    NSLog("Key pressed \(theEvent.keyCode)")
+    vc.debugLog(msg: "Key hit: \(theEvent.keyCode)")
   }
 }
 
