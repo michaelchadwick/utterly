@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2740A6411DE982460078C7AD /* UtterlyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740A6401DE982460078C7AD /* UtterlyTextView.swift */; };
+		276902391DE8F7BA0072DD27 /* UtterlyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276902381DE8F7BA0072DD27 /* UtterlyConstants.swift */; };
 		54B0F8ED1DE8A0E3000D0F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0F8EC1DE8A0E3000D0F8F /* AppDelegate.swift */; };
 		54B0F8EF1DE8A0E3000D0F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0F8EE1DE8A0E3000D0F8F /* ViewController.swift */; };
 		54B0F8F11DE8A0E3000D0F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B0F8F01DE8A0E3000D0F8F /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2740A6401DE982460078C7AD /* UtterlyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtterlyTextView.swift; sourceTree = "<group>"; };
+		276902381DE8F7BA0072DD27 /* UtterlyConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtterlyConstants.swift; sourceTree = "<group>"; };
 		54B0F8E91DE8A0E3000D0F8F /* Utterly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Utterly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B0F8EC1DE8A0E3000D0F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B0F8EE1DE8A0E3000D0F8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +103,9 @@
 				54B0F8EE1DE8A0E3000D0F8F /* ViewController.swift */,
 				54B0F8F01DE8A0E3000D0F8F /* Assets.xcassets */,
 				54B0F8F21DE8A0E3000D0F8F /* Main.storyboard */,
+				2740A6401DE982460078C7AD /* UtterlyTextView.swift */,
 				54B0F8F51DE8A0E3000D0F8F /* Info.plist */,
+				276902381DE8F7BA0072DD27 /* UtterlyConstants.swift */,
 			);
 			path = Utterly;
 			sourceTree = "<group>";
@@ -185,7 +191,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Michael Chadwick";
 				TargetAttributes = {
 					54B0F8E81DE8A0E3000D0F8F = {
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276902391DE8F7BA0072DD27 /* UtterlyConstants.swift in Sources */,
 				54B0F8EF1DE8A0E3000D0F8F /* ViewController.swift in Sources */,
 				54B0F8ED1DE8A0E3000D0F8F /* AppDelegate.swift in Sources */,
+				2740A6411DE982460078C7AD /* UtterlyTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +332,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -373,6 +382,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -505,6 +515,7 @@
 				54B0F9101DE8A0E4000D0F8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54B0F9111DE8A0E4000D0F8F /* Build configuration list for PBXNativeTarget "UtterlyTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +524,7 @@
 				54B0F9131DE8A0E4000D0F8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54B0F9141DE8A0E4000D0F8F /* Build configuration list for PBXNativeTarget "UtterlyUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +533,7 @@
 				54B0F9161DE8A0E4000D0F8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
