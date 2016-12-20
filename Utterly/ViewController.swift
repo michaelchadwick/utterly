@@ -317,6 +317,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     populateVoices()
     setSynthVoice()
     setupOptions()
+    synth.delegate = self;
   }
   override var representedObject: Any? {
     didSet {
@@ -330,6 +331,8 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     buttonPlayStop.title = ICON_PLAY
     buttonPauseResume.isEnabled = false
   }
+
+
 
   // MARK - Helper Methods
   func logSpeechStats() {
