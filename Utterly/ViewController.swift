@@ -187,7 +187,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
   @IBOutlet weak var opsVolumeSlider: NSSlider!
   @IBOutlet weak var opsVolumeText: NSTextField!
   @IBOutlet weak var opsVolumeReset: NSButton!
-  @IBOutlet weak var opsResetAll: NSButton!
+  @IBOutlet weak var opsButtonResetAll: NSButton!
   @IBOutlet weak var opsSaveToFile: NSButton!
   @IBOutlet weak var opsUseTextAsFilename: NSButton!
   
@@ -204,14 +204,14 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
   }
 
   @IBAction func opsSpeedSliderDidChange(_ sender: Any) {
-    opsSpeedText.stringValue = opsSpeedSlider.stringValue
+    opsSpeedText.stringValue = "\(opsSpeedSlider.intValue)"
     setSynthSpeed()
     if (!isPaused) {
       startUtterance()
     }
   }
   @IBAction func opsPitchSliderDidChange(_ sender: Any) {
-    opsPitchText.stringValue = opsPitchSlider.stringValue
+    opsPitchText.stringValue = "\(opsPitchSlider.intValue)"
     do {
       try setSynthPitch()
     } catch {
@@ -222,7 +222,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     }
   }
   @IBAction func opsPitchModSliderDidChange(_ sender: Any) {
-    opsPitchModText.stringValue = opsPitchModSlider.stringValue
+    opsPitchModText.stringValue = "\(opsPitchModSlider.intValue)"
     do {
       try setSynthPitchMod()
     } catch {
@@ -233,7 +233,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     }
   }
   @IBAction func opsVolumeSliderDidChange(_ sender: Any) {
-    opsVolumeText.stringValue = opsVolumeSlider.stringValue
+    opsVolumeText.stringValue = "\(opsVolumeSlider.intValue)"
     setSynthVolume()
     if (!isPaused) {
       startUtterance()
@@ -269,6 +269,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     startUtterance()
   }
   @IBAction func opsResetAllClicked(_ sender: Any) {
+    // reset labels and sliders
     opsSpeedSlider.floatValue = Float(INITIAL_SPEED)
     opsSpeedText.floatValue = Float(INITIAL_SPEED)
     opsPitchSlider.floatValue = Float(INITIAL_PITCH)
@@ -277,6 +278,20 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     opsPitchModText.floatValue = Float(INITIAL_PITCHMOD)
     opsVolumeSlider.intValue = Int32(INITIAL_VOLUME)
     opsVolumeText.floatValue = Float(INITIAL_VOLUME)
+
+    // reset synth
+    setSynthSpeed()
+    setSynthVolume()
+    do {
+      try setSynthPitch()
+    } catch {
+      debugLog(msg: "Could not set synth pitch")
+    }
+    do {
+      try setSynthPitchMod()
+    } catch {
+      debugLog(msg: "Could not set synth pitch mod")
+    }
 
     startStopUtterance()
     startUtterance()
@@ -322,22 +337,22 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
       NSLog("---------------------");
       NSLog("!!! utterance STARTED");
       NSLog("utteranceVOICE: %@", synth.voice()!)
-      NSLog("utteranceRATE: %f", synth.rate)
+      NSLog("utteranceRATE: %.2f", synth.rate)
       var utterancePitchBase = 0
       do {
         utterancePitchBase = try synth.object(forProperty: NSSpeechPitchBaseProperty) as! Int
       } catch {
         NSLog("utterancePITCHBASE: cannot be determined")
       }
-      NSLog("utterancePITCHBASE: %@", utterancePitchBase)
+      NSLog("utterancePITCHBASE: %.2f", utterancePitchBase)
       var utterancePitchMod = 0
       do {
         utterancePitchMod = try synth.object(forProperty: NSSpeechPitchModProperty) as! Int
       } catch {
         NSLog("utterancePITCHMOD: cannot be determined")
       }
-      NSLog("utterancePITCHMOD: %@", utterancePitchMod)
-      NSLog("utteranceVOLUME: %f", synth.volume)
+      NSLog("utterancePITCHMOD: %.2f", utterancePitchMod)
+      NSLog("utteranceVOLUME: %.2f", synth.volume)
     }
   }
   func debugLog(msg: String) {
@@ -349,4 +364,3 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     return str.characters.split{$0 == "."}.map(String.init)
   }
 }
-

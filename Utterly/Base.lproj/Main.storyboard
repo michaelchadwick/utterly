@@ -690,20 +690,20 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUy-Jx-tU6">
                                 <rect key="frame" x="-3" y="203" width="134" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="utter_logo_128x128" id="OKK-rP-XXo"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="grayBezel" image="utter_logo_128x128" id="OKK-rP-XXo"/>
                             </imageView>
                             <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKq-uO-wDf">
-                                <rect key="frame" x="128" y="203" width="432" height="131"/>
+                                <rect key="frame" x="128" y="206" width="432" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <clipView key="contentView" ambiguous="YES" id="sqi-c3-9xb">
-                                    <rect key="frame" x="1" y="1" width="430" height="129"/>
+                                    <rect key="frame" x="1" y="1" width="430" height="126"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="2Ub-r8-FXi" customClass="UtterlyTextView" customModule="Utterly" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="129"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="126"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="430" height="129"/>
+                                            <size key="minSize" width="430" height="126"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -768,17 +768,6 @@
                                     <action selector="popupVoicesDidChange:" target="XfG-lQ-9wD" id="HOJ-tL-RJo"/>
                                 </connections>
                             </popUpButton>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-wk-JRx">
-                                <rect key="frame" x="214" y="42" width="93" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Reset All" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="314-nF-qzO">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="opsResetAllClicked:" target="XfG-lQ-9wD" id="R7e-9R-8ix"/>
-                                </connections>
-                            </button>
                             <box fixedFrame="YES" title="Options" translatesAutoresizingMaskIntoConstraints="NO" id="QZg-Hf-gPJ">
                                 <rect key="frame" x="10" y="12" width="541" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -820,7 +809,7 @@
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="opsPitchModeResetClicked:" target="XfG-lQ-9wD" id="E4h-EQ-bLj"/>
+                                                <action selector="opsPitchModResetClicked:" target="XfG-lQ-9wD" id="2sL-0A-JTI"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XiS-Lb-mIW">
@@ -956,6 +945,17 @@
                                                 <action selector="opsUseTextAsFilenameDidToggle:" target="XfG-lQ-9wD" id="BH6-cN-l47"/>
                                             </connections>
                                         </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IxQ-wk-JRx">
+                                            <rect key="frame" x="222" y="23" width="93" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Reset All" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="314-nF-qzO">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="opsResetAllClicked:" target="XfG-lQ-9wD" id="IWd-Xc-djj"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                             </box>
@@ -973,14 +973,13 @@
                     <connections>
                         <outlet property="buttonPauseResume" destination="xpI-db-Kem" id="C50-9l-jr0"/>
                         <outlet property="buttonPlayStop" destination="KvI-WU-s7e" id="7ie-q5-npg"/>
-                        <outlet property="opsButtonResetAll" destination="IxQ-wk-JRx" id="SfZ-c3-rM2"/>
+                        <outlet property="opsButtonResetAll" destination="IxQ-wk-JRx" id="ZgD-N7-F5c"/>
                         <outlet property="opsPitchModReset" destination="8TI-jx-Lg1" id="SUZ-A1-neK"/>
                         <outlet property="opsPitchModSlider" destination="TGa-Wj-dB0" id="Uwm-dH-kHS"/>
                         <outlet property="opsPitchModText" destination="ZAZ-5b-6Ah" id="x2J-dd-uQP"/>
                         <outlet property="opsPitchReset" destination="vQS-Vy-IzZ" id="hu9-bE-ZlO"/>
                         <outlet property="opsPitchSlider" destination="fsz-aQ-DoJ" id="KKB-mU-kfi"/>
                         <outlet property="opsPitchText" destination="ZKf-t5-u65" id="5Ec-a3-V3C"/>
-                        <outlet property="opsResetAll" destination="IxQ-wk-JRx" id="ZWI-uD-EDv"/>
                         <outlet property="opsSaveToFile" destination="2y1-Rf-Xsm" id="Qet-0c-hM0"/>
                         <outlet property="opsSpeedReset" destination="69M-gr-ZVg" id="0SC-cn-iZw"/>
                         <outlet property="opsSpeedSlider" destination="Ah5-AT-9QD" id="4B8-H8-ieu"/>
