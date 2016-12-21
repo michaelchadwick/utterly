@@ -26,7 +26,11 @@ class UtterlyTextView: NSTextView {
     if theEvent.modifierFlags.contains(.command) {
       if theEvent.keyCode == 36 { // Cmd-Enter combo
         vc.debugLog(msg: "Cmd-Enter combo hit")
-        vc.startUtterance()
+        if (vc.isSpeaking) {
+          vc.stopUtterance()
+        } else {
+          vc.startUtterance()
+        }
       }
     }
     if theEvent.modifierFlags.contains(.shift) {

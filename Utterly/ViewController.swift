@@ -16,6 +16,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
   // MARK - Flags
   var isDebug = true
   var isPaused = false
+  var isSpeaking = false
 
   // MARK - Counters
   var utteranceCount = 0
@@ -74,66 +75,63 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
   }
   /// using the playStop button? check state and then issue command
   func stopStartUtterance() {
-    if (synth.isSpeaking) {
+    if (synth.isSpeaking || isSpeaking) {
       stopUtterance()
     } else {
       startUtterance()
     }
-  }
-  /// changing options? restart the utterance
-  func restartUtterance() {
-    if (synth.isSpeaking) {
-      stopUtterance()
-    }
-    if (!isPaused) {
-      stopUtterance()
-      startUtterance()
-    } // else do nothing
   }
   /// stop the current Utterance
   func stopUtterance() {
     synth.stopSpeaking()
     buttonPlayStop.title = ICON_PLAY
     buttonPauseResume.isEnabled = false
+    isSpeaking = false
   }
   /// start a new Utterance
   func startUtterance() {
-    utteranceCount += 1
-    var utterance = ""
-    do {
-      utterance = try getTextToUtter()
-    } catch {
-      debugLog(msg: "error: utterance invalid")
-    }
+    // if already speaking, keep going, otherwise start new one
+    if (synth.isSpeaking || isSpeaking) {
+      synth.continueSpeaking()
+    } else {
+      // increase utterance count for record keeping
+      utteranceCount += 1
 
-    // make sure we stop any current speaking
-    synth.stopSpeaking()
+      // create new utterance and play it
+      var utterance = ""
+      do {
+        utterance = try getTextToUtter()
+      } catch {
+        debugLog(msg: "error: utterance invalid")
+      }
 
-    // set up attributes
-    setSynthVoice()
-    setSynthSpeed()
-    do {
-      try setSynthPitch()
-    } catch {
-      debugLog(msg: "Could not set synth pitch")
-    }
-    do {
-      try setSynthPitchMod()
-    } catch {
-      debugLog(msg: "Could not set synth pitch mod")
-    }
-    setSynthVolume()
+      //// set up attributes
+      setSynthVoice()
+      setSynthSpeed()
+      do {
+        try setSynthPitch()
+      } catch {
+        debugLog(msg: "Could not set synth pitch")
+      }
+      do {
+        try setSynthPitchMod()
+      } catch {
+        debugLog(msg: "Could not set synth pitch mod")
+      }
+      setSynthVolume()
 
-    // speak!
-    synth.startSpeaking(utterance)
-    buttonPlayStop.title = ICON_STOP
-    buttonPauseResume.isEnabled = true
+      //// speak!
+      synth.startSpeaking(utterance)
+      isSpeaking = true
+      buttonPlayStop.title = ICON_STOP
+      buttonPauseResume.isEnabled = true
 
-    logSpeechStats()
+      logSpeechStats()
 
-    // save to file, if enabled
-    if (opsSaveToFile.state == NSOnState) {
-      saveUtteranceToFile()
+      //// save to file, if enabled
+      if (opsSaveToFile.state == NSOnState) {
+        saveUtteranceToFile()
+      }
     }
   }
   func pauseResumeUtterance() {
@@ -149,6 +147,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     buttonPauseResume.title = ICON_RESUME
     buttonPlayStop.isEnabled = false
     isPaused = true
+    isSpeaking = false
   }
   func resumeUtterance() {
     debugLog(msg: "|> utterance RESUMED")
@@ -156,6 +155,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     buttonPauseResume.title = ICON_PAUSE
     buttonPlayStop.isEnabled = true
     isPaused = false
+    isSpeaking = true
   }
   func saveUtteranceToFile() {
     let synthToSave = NSSpeechSynthesizer()
@@ -231,7 +231,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     debugLog(msg: "Changed speed")
     opsSpeedText.stringValue = "\(opsSpeedSlider.intValue)"
     setSynthSpeed()
-    restartUtterance()
+    startUtterance()
   }
   @IBAction func opsPitchSliderDidChange(_ sender: Any) {
     debugLog(msg: "Changed pitch")
@@ -241,7 +241,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     } catch {
       debugLog(msg: "Could not set synth pitch")
     }
-    restartUtterance()
+    startUtterance()
   }
   @IBAction func opsPitchModSliderDidChange(_ sender: Any) {
     debugLog(msg: "Changed pitch mod")
@@ -251,38 +251,38 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     } catch {
       debugLog(msg: "Could not set synth pitch mod")
     }
-    restartUtterance()
+    startUtterance()
   }
   @IBAction func opsVolumeSliderDidChange(_ sender: Any) {
     debugLog(msg: "Changed volume")
     opsVolumeText.stringValue = "\(opsVolumeSlider.intValue)"
     setSynthVolume()
-    restartUtterance()
+    startUtterance()
   }
 
   @IBAction func opsSpeedResetClicked(_ sender: Any) {
     opsSpeedSlider.intValue = Int32(INITIAL_SPEED)
     opsSpeedText.intValue = Int32(INITIAL_SPEED)
 
-    restartUtterance()
+    startUtterance()
   }
   @IBAction func opsPitchResetClicked(_ sender: Any) {
     opsPitchSlider.intValue = Int32(INITIAL_PITCH)
     opsPitchText.intValue = Int32(INITIAL_PITCH)
 
-    restartUtterance()
+    startUtterance()
   }
   @IBAction func opsPitchModResetClicked(_ sender: Any) {
     opsPitchModSlider.intValue = Int32(INITIAL_PITCHMOD)
     opsPitchModText.intValue = Int32(INITIAL_PITCHMOD)
 
-    restartUtterance()
+    startUtterance()
   }
   @IBAction func opsVolumeResetClicked(_ sender: Any) {
     opsVolumeSlider.intValue = Int32(INITIAL_VOLUME)
     opsVolumeText.intValue = Int32(INITIAL_VOLUME)
 
-    restartUtterance()
+    startUtterance()
   }
   @IBAction func opsResetAllClicked(_ sender: Any) {
     // reset labels and sliders
@@ -309,7 +309,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
       debugLog(msg: "Could not set synth pitch mod")
     }
 
-    restartUtterance()
+    startUtterance()
   }
   @IBAction func opsSaveToFileDidToggle(_ sender: Any) {
     debugLog(msg: String(format:"opsSaveToFile->%ld", opsSaveToFile.state as CLong))
@@ -342,11 +342,13 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
 
   func speechSynthesizer(_ sender: NSSpeechSynthesizer,
                                   didFinishSpeaking finishedSpeaking: Bool) {
+    debugLog(msg: String(format: "finishedSpeaking: %@", finishedSpeaking as CVarArg))
     debugLog(msg: "-----------------------")
     debugLog(msg: String(format:"XXX utterance %03d ENDED", utteranceCount))
     debugLog(msg: "-----------------------")
     buttonPlayStop.title = ICON_PLAY
     buttonPauseResume.isEnabled = false
+    isSpeaking = false
   }
 
   // MARK - Helper Methods
