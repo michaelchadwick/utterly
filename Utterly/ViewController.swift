@@ -11,10 +11,8 @@ import AVFoundation
 
 class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDelegate {
 
-  let mainWindow = NSApplication.shared().windows.first
-
   // MARK - Flags
-  var isDebug = true
+  var isDebug = false
   var isPaused = false
 
   // MARK - Counters
