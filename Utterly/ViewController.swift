@@ -334,9 +334,6 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     setupOptions()
     synth.delegate = self
   }
-  override func keyDown(with event: NSEvent) {
-    debugLog(msg: "key = " + (event.characters)!)
-  }
   override var representedObject: Any? {
     didSet {
     // Update the view, if already loaded.

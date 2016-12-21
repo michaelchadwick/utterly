@@ -99,13 +99,13 @@
 		54B0F8EB1DE8A0E3000D0F8F /* Utterly */ = {
 			isa = PBXGroup;
 			children = (
-				54B0F8EC1DE8A0E3000D0F8F /* AppDelegate.swift */,
-				54B0F8EE1DE8A0E3000D0F8F /* ViewController.swift */,
 				54B0F8F01DE8A0E3000D0F8F /* Assets.xcassets */,
-				54B0F8F21DE8A0E3000D0F8F /* Main.storyboard */,
-				2740A6401DE982460078C7AD /* UtterlyTextView.swift */,
+				54B0F8EC1DE8A0E3000D0F8F /* AppDelegate.swift */,
 				54B0F8F51DE8A0E3000D0F8F /* Info.plist */,
+				54B0F8F21DE8A0E3000D0F8F /* Main.storyboard */,
 				276902381DE8F7BA0072DD27 /* UtterlyConstants.swift */,
+				2740A6401DE982460078C7AD /* UtterlyTextView.swift */,
+				54B0F8EE1DE8A0E3000D0F8F /* ViewController.swift */,
 			);
 			path = Utterly;
 			sourceTree = "<group>";

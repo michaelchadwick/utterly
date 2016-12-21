@@ -9,8 +9,6 @@
 import Cocoa
 
 class UtterlyTextView: NSTextView {
-  let vc = ViewController()
-
   // Allow TextView to receive keypress (remove the purr sound)
   override var acceptsFirstResponder : Bool {
     return true
@@ -23,6 +21,7 @@ class UtterlyTextView: NSTextView {
   // Override the NSTextView keydown func to read keycode of pressed key
   override func keyDown(with theEvent: NSEvent)
   {
+    let vc = NSApplication.shared().mainWindow?.windowController?.contentViewController as! ViewController
     super.keyDown(with: theEvent) // do normal event (e.g. insert character)
     if theEvent.modifierFlags.contains(.command) {
       if theEvent.keyCode == 36 { // Cmd-Enter combo
