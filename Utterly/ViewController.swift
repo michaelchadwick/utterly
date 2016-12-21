@@ -16,7 +16,6 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
   // MARK - Flags
   var isDebug = true
   var isPaused = false
-  var isSpeaking = false
 
   // MARK - Counters
   var utteranceCount = 0
@@ -75,7 +74,7 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
   }
   /// using the playStop button? check state and then issue command
   func stopStartUtterance() {
-    if (synth.isSpeaking || isSpeaking) {
+    if (synth.isSpeaking) {
       stopUtterance()
     } else {
       startUtterance()
@@ -86,12 +85,11 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     synth.stopSpeaking()
     buttonPlayStop.title = ICON_PLAY
     buttonPauseResume.isEnabled = false
-    isSpeaking = false
   }
   /// start a new Utterance
   func startUtterance() {
     // if already speaking, keep going, otherwise start new one
-    if (synth.isSpeaking || isSpeaking) {
+    if (synth.isSpeaking) {
       synth.continueSpeaking()
     } else {
       // increase utterance count for record keeping
@@ -122,7 +120,6 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
 
       //// speak!
       synth.startSpeaking(utterance)
-      isSpeaking = true
       buttonPlayStop.title = ICON_STOP
       buttonPauseResume.isEnabled = true
 
@@ -147,7 +144,6 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     buttonPauseResume.title = ICON_RESUME
     buttonPlayStop.isEnabled = false
     isPaused = true
-    isSpeaking = false
   }
   func resumeUtterance() {
     debugLog(msg: "|> utterance RESUMED")
@@ -155,7 +151,6 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     buttonPauseResume.title = ICON_PAUSE
     buttonPlayStop.isEnabled = true
     isPaused = false
-    isSpeaking = true
   }
   func saveUtteranceToFile() {
     let synthToSave = NSSpeechSynthesizer()
@@ -348,7 +343,6 @@ class ViewController: NSViewController, NSSpeechSynthesizerDelegate, NSWindowDel
     debugLog(msg: "-----------------------")
     buttonPlayStop.title = ICON_PLAY
     buttonPauseResume.isEnabled = false
-    isSpeaking = false
   }
 
   // MARK - Helper Methods
