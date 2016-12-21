@@ -13,7 +13,7 @@ let INITIAL_PITCH = 56
 let INITIAL_PITCHMOD = 60
 let INITIAL_VOLUME = 100
 
-let ICON_PLAY = "\u{25BA}"
+let ICON_PLAY = "\u{25B6}"
 let ICON_STOP = "\u{25FC}"
 let ICON_PAUSE = "||"
 let ICON_RESUME = "|>"
