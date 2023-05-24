@@ -13,7 +13,3 @@ I'd had fun making [Utter](https://github.com/michaelchadwick/utter), but ran in
 
 ### Contributing
 Clone the repo and build the Xcode project. It was created in **Xcode 8**, and was targeted to **macOS 10.2**,  but _may_ work in earlier versions.
-
-### Questions, Feedback, Suggestions
-* [mike@codana.me](mailto:mike@codana.me)
-* [Other projects](http://codana.me/projects)
